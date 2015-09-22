@@ -1,0 +1,15 @@
+rangeJer = int(input())
+rangeAth = int(input())
+Jer = []
+Ath = []
+AthNum = []
+for num in range(0, rangeJer):
+    Jer.append(raw_input())
+for num1 in range(0, rangeAth):
+    Ath.append(raw_input())
+    AthNum.append(int(input()))
+count = 0
+for nums in range(0, rangeAth):
+    if Jer[AthNum[nums] - 1] == Ath[nums]:
+        count += 1
+print count
