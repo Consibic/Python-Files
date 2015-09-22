@@ -1,0 +1,22 @@
+rangeNum = int(input())
+numList = []
+for number in range(0, rangeNum):
+    numList.append(int(input()))
+count = 0
+num = 0
+while count < rangeNum:
+    if numList[count] == 0 and count != 0:
+        numList.remove(numList[count])
+        numList.remove(numList[count - 1])
+        count -= 1
+        rangeNum -= 2
+    elif numList[count] == 0 and count == 0:
+        count += 1
+    else:
+        count += 1
+count1 = 0
+total = 0
+for number1 in numList:
+    total += number1 
+print total
+    
