@@ -1,0 +1,24 @@
+rangeGate = int(input())
+rangePlane = int(input())
+gatePlane = []
+gate = []
+for numGate in range(0, rangeGate):
+    gate.append(0)
+for num in range(0, rangePlane):
+    gatePlane.append(int(input()))
+count = 0
+num1 = 0
+num2 = 0
+while num1 <= rangePlane - 1:
+    num2 = gatePlane[num1] - 1
+    while num2 >= 0:
+        if gate[num2] == 0:
+            gate[num2] = num1 + 1
+            num1 += 1
+            count += 1
+            break
+        else:
+            num2 -= 1
+    if num2 == -1:
+        break
+print count
